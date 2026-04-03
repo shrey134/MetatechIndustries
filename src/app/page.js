@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import MarqueeProductCard from "@/components/MarqueeProductCard";
 import { products, mainConsumables } from "@/data/categories";
 
 export default function Home() {
@@ -167,26 +168,22 @@ export default function Home() {
               animation-play-state: paused;
             }
           }
-          .hover-panel {
+          .hp-hover-panel {
             opacity: 0;
             visibility: hidden;
-            transform: translateX(10px);
-            transition: all 250ms ease-out;
-            transition-delay: 200ms;
+            transition: opacity 200ms ease-out, visibility 200ms ease-out;
+            pointer-events: none;
           }
-          .card-group:hover .hover-panel {
+          .hp-card-group:hover .hp-hover-panel {
             opacity: 1;
             visibility: visible;
-            transform: translateX(0);
-            transition-delay: 180ms;
+            pointer-events: auto;
           }
-          .card-group {
+          .hp-card-group {
             z-index: 10;
-            transition: transform 250ms ease-out 200ms, box-shadow 250ms ease-out 200ms, border-color 250ms ease-out 200ms, opacity 250ms ease-out 200ms, z-index 0ms linear 450ms;
           }
-          .card-group:hover {
+          .hp-card-group:hover {
             z-index: 50;
-            transition: transform 250ms ease-out 180ms, box-shadow 250ms ease-out 180ms, border-color 250ms ease-out 180ms, opacity 250ms ease-out 180ms, z-index 0ms linear 180ms;
           }
           @media (max-width: 1024px) {
             .marquee-container {
@@ -203,79 +200,10 @@ export default function Home() {
 
         <div className="w-full relative marquee-container overflow-visible mt-2">
           <div className="animate-marquee gap-8 pr-8 shrink-0">
-            {[...featuredProducts, ...featuredProducts].map((product, i) => {
-              const titleCase = product.name.charAt(0).toUpperCase() + product.name.slice(1).toLowerCase();
-              return (
-                <div
-                  key={`${product.slug}-${i}`}
-                  className="card-group relative flex bg-white border border-slate-200/60 w-[240px] md:w-[280px] shrink-0 hover:scale-[1.03] hover:shadow-[0_20px_50px_-15px_rgba(0,0,0,0.15)] hover:border-[#1a3c5a]/30"
-                >
-                  <div className="flex flex-col w-full">
-                    <div className="h-[200px] md:h-[240px] w-full bg-slate-50 flex items-center justify-center relative overflow-hidden">
-                      <img
-                        src={product.image || product.images?.[0]}
-                        alt={product.name}
-                        className="w-full h-full object-contain p-0 m-0 group-hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
-                    <div className="p-4 border-t border-slate-100">
-                      <h3 className="text-[13px] font-black tracking-tight text-[#1a3c5a] line-clamp-1">
-                        {titleCase}
-                      </h3>
-                    </div>
-                  </div>
+            {[...featuredProducts, ...featuredProducts].map((product, i) => (
+              <MarqueeProductCard key={`${product.slug}-${i}`} product={product} />
+            ))}
 
-                  <div className="hover-panel absolute left-full top-0 h-full w-[200px] bg-white border border-slate-200 shadow-2xl z-[60] p-5 hidden lg:flex flex-col border-l-0">
-                    <h4 className="text-[10px] font-black text-primary tracking-[0.15em] mb-4 border-b border-slate-100 pb-2">Key Specifications</h4>
-                    <div className="flex flex-col gap-2.5 mb-5 text-[10px]">
-                      <div className="flex flex-col">
-                        <span className="text-[8px] text-slate-400 font-bold">Category</span>
-                        <span className="text-[#1a3c5a] font-bold line-clamp-1 first-letter:uppercase">{(product.categorySlug || '').replace(/-/g, ' ').toLowerCase() || "Precision machine"}</span>
-                      </div>
-                      <div className="flex flex-col">
-                        <span className="text-[8px] text-slate-400 font-bold">Series</span>
-                        <span className="text-[#1a3c5a] font-bold line-clamp-1">Standard industrial</span>
-                      </div>
-                      <div className="flex flex-col">
-                        <span className="text-[8px] text-slate-400 font-bold">Unit ID</span>
-                        <span className="text-slate-600 font-mono font-bold line-clamp-1">MT-{product.slug?.toUpperCase().split('-')[0] || 'GEN'}</span>
-                      </div>
-                    </div>
-
-                    <h4 className="text-[9px] font-black text-slate-400 tracking-[0.15em] mb-3 pb-1">Technical Data</h4>
-                    <div className="flex flex-col gap-2.5 mb-2 text-[10px]">
-                      {product.specifications?.slice(0, 2).map((spec, idx) => (
-                        <div key={idx} className="flex flex-col">
-                          <span className="text-[8px] text-slate-400 font-bold line-clamp-1">{spec.param}</span>
-                          <span className="text-[#1a3c5a] font-bold line-clamp-1">{spec.value}</span>
-                        </div>
-                      )) || (
-                          <>
-                            <div className="flex flex-col">
-                              <span className="text-[8px] text-slate-400 font-bold uppercase line-clamp-1">Power</span>
-                              <span className="text-[#1a3c5a] font-bold line-clamp-1">2.2 kW / 3 HP</span>
-                            </div>
-                            <div className="flex flex-col">
-                              <span className="text-[8px] text-slate-400 font-bold uppercase line-clamp-1">Operation</span>
-                              <span className="text-[#1a3c5a] font-bold line-clamp-1">Automatic</span>
-                            </div>
-                          </>
-                        )}
-                    </div>
-
-                    <Link
-                      href={`/products/${product.slug}`}
-                      className="mt-auto group/btn flex items-center justify-between bg-[#1a3c5a] text-white px-3 py-2.5 text-[9px] font-black tracking-widest hover:bg-primary transition-all"
-                    >
-                      Get details <span className="material-symbols-outlined text-[12px] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
-                    </Link>
-                  </div>
-                  <style jsx>{`
-                    .marquee-container:hover .card-group:not(:hover) { opacity: 0.9; }
-                  `}</style>
-                </div>
-              )
-            })}
           </div>
         </div>
       </section>

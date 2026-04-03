@@ -1,15 +1,17 @@
 import { NextResponse } from 'next/server';
 import connectToDatabase from '@/lib/mongodb';
 import Inquiry from '@/models/Inquiry';
-import { Parser } from 'json2csv';
-import ExcelJS from 'exceljs';
-import { google } from 'googleapis';
 
 export async function GET(request) {
   try {
     const searchParams = request.nextUrl.searchParams;
     const token = searchParams.get('token');
     const format = searchParams.get('format') || 'csv';
+    
+    // Dynamic imports for large libraries to prevent Turbopack panics
+    const { Parser } = await import('json2csv');
+    const { default: ExcelJS } = await import('exceljs');
+    const { google } = await import('googleapis');
     
     // Filters
     const typeFilter = searchParams.get('type');
@@ -118,19 +120,20 @@ export async function GET(request) {
     }
 
     if (format === 'google-sheets') {
-      const authEmail = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL;
-      const authKey = process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n');
+      const accessToken = searchParams.get('access_token');
 
-      if (!authEmail || !authKey) {
+      if (!accessToken) {
         return NextResponse.json({ 
             success: false, 
-            error: 'Google API credentials not configured. Please add GOOGLE_SERVICE_ACCOUNT_EMAIL and GOOGLE_PRIVATE_KEY to .env.local' 
-        }, { status: 500 });
+            error: 'Google Access Token is required for this format. Please authenticate with Google.' 
+        }, { status: 401 });
       }
 
-      const auth = new google.auth.JWT(authEmail, null, authKey, ['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive']);
+      // Initialize OAuth2 Client
+      const auth = new google.auth.OAuth2();
+      auth.setCredentials({ access_token: accessToken });
+
       const sheets = google.sheets({ version: 'v4', auth });
-      const drive = google.drive({ version: 'v3', auth });
 
       const resource = {
         properties: {
@@ -158,18 +161,9 @@ export async function GET(request) {
         resource: { values },
       });
 
-      // Share spreadsheet (only with admin email)
-      const adminEmail = process.env.EMAIL_USER;
-      if (adminEmail) {
-        await drive.permissions.create({
-          fileId: spreadsheetId,
-          requestBody: {
-            role: 'reader',
-            type: 'user',
-            emailAddress: adminEmail,
-          },
-        });
-      }
+      console.log('--- Google Sheets OAuth Export ---');
+      console.log('Spreadsheet ID:', spreadsheetId);
+      console.log('---------------------------------');
 
       return NextResponse.json({ success: true, url: spreadsheet.data.spreadsheetUrl });
     }

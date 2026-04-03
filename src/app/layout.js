@@ -29,6 +29,7 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-25..200"
           rel="stylesheet"
         />
+        <script src="https://accounts.google.com/gsi/client" async defer></script>
       </head>
       <body className="font-sans antialiased bg-background text-on-surface flex flex-col min-h-screen">
         <Navbar />
