@@ -7,12 +7,12 @@ export async function GET(request) {
     const searchParams = request.nextUrl.searchParams;
     const token = searchParams.get('token');
     const format = searchParams.get('format') || 'csv';
-    
+
     // Dynamic imports for large libraries to prevent Turbopack panics
     const { Parser } = await import('json2csv');
     const { default: ExcelJS } = await import('exceljs');
     const { google } = await import('googleapis');
-    
+
     // Filters
     const typeFilter = searchParams.get('type');
     const searchTerm = searchParams.get('search');
@@ -73,7 +73,7 @@ export async function GET(request) {
         });
         return row;
       });
-      
+
       const parser = new Parser({ fields: csvFields });
       const csv = parser.parse(csvData);
 
@@ -91,7 +91,7 @@ export async function GET(request) {
       const worksheet = workbook.addWorksheet('Inquiries');
 
       worksheet.columns = fields.map(f => ({ header: f.label, key: f.label, width: 20 }));
-      
+
       inquiries.forEach(inq => {
         const row = {};
         fields.forEach(f => {
@@ -123,9 +123,9 @@ export async function GET(request) {
       const accessToken = searchParams.get('access_token');
 
       if (!accessToken) {
-        return NextResponse.json({ 
-            success: false, 
-            error: 'Google Access Token is required for this format. Please authenticate with Google.' 
+        return NextResponse.json({
+          success: false,
+          error: 'Google Access Token is required for this format. Please authenticate with Google.'
         }, { status: 401 });
       }
 
@@ -148,7 +148,6 @@ export async function GET(request) {
 
       const spreadsheetId = spreadsheet.data.spreadsheetId;
 
-      // Add data
       const values = [
         fields.map(f => f.label),
         ...inquiries.map(inq => fields.map(f => typeof f.value === 'function' ? f.value(inq) : inq[f.value]))
