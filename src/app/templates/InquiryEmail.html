@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inquiry Received - Metatech Industries</title>
+  <style>
+    /* Reset styles for email clients */
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
+    body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #f4f7f9; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #333333; }
+    
+    /* Email container */
+    .email-wrapper { width: 100%; background-color: #f4f7f9; padding: 40px 0; }
+    .email-container { max-width: 600px; margin: 0 auto; background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 4px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+
+    /* Header */
+    .header { background-color: #EAF4FB; padding: 24px; text-align: center; border-bottom: 2px solid #1F4E79; }
+    .logo { max-width: 180px; height: auto; display: block; margin: 0 auto; }
+    .company-name { font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: #1F4E79; margin-top: 12px; }
+
+    /* Content Area */
+    .content { padding: 40px 32px; line-height: 1.6; }
+    .greeting { font-size: 18px; font-weight: 700; margin-bottom: 20px; color: #1F4E79; }
+    .main-text { font-size: 15px; color: #444444; margin-bottom: 24px; }
+    .highlight { color: #1F4E79; font-weight: 800; border-bottom: 2px solid #EAF4FB; }
+
+    /* CTA Button */
+    .cta-container { text-align: center; margin: 32px 0; }
+    .cta-button { background-color: #1F4E79; color: #ffffff !important; padding: 16px 32px; text-decoration: none; font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; border-radius: 4px; display: inline-block; transition: background-color 0.3s; }
+    
+    /* Signature */
+    .signature { margin-top: 40px; padding-top: 24px; border-top: 1px solid #f0f0f0; }
+    .signature-text { font-size: 14px; margin: 0; color: #666666; }
+    .signature-team { font-weight: 800; color: #1F4E79; font-size: 15px; }
+
+    /* Footer */
+    .footer { background-color: #f9fbff; padding: 32px; border-top: 1px solid #e1e8ed; text-align: center; }
+    .footer-text { font-size: 12px; color: #888888; margin: 4px 0; line-height: 1.8; }
+    .footer-divider { width: 40px; height: 2px; background-color: #EAF4FB; margin: 16px auto; }
+
+    /* Mobile responsiveness */
+    @media screen and (max-width: 600px) {
+      .email-wrapper { padding: 20px 10px; }
+      .content { padding: 32px 20px; }
+      .cta-button { width: 100%; box-sizing: border-box; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="email-wrapper">
+    <div class="email-container">
+      
+      <!-- HEADER -->
+      <div class="header">
+        <!-- COMPANY LOGO -->
+        <img src="https://metatechindustries.com/images/metatech_logo.png" alt="Metatech Industries" class="logo">
+      </div>
+
+      <!-- MAIN CARD CONTENT -->
+      <div class="content">
+        <p class="greeting">Hi {{Name}},</p>
+        
+        {{MessageBody}}
+
+        <!-- CTA SECTION -->
+        <div class="cta-container">
+          <a href="https://metatechindustries.com/products" class="cta-button">
+            View Our Machines &nbsp; →
+          </a>
+        </div>
+
+        <!-- SIGNATURE -->
+        <div class="signature">
+          <p class="signature-text">Best regards,</p>
+          <p class="signature-team">The Metatech Industries Sales Team</p>
+          <div style="margin-top: 15px; font-size: 13px; color: #666; line-height: 1.5;">
+            <strong>Email:</strong> <a href="mailto:sales@metatechind.com" style="color: #1F4E79; text-decoration: none;">sales@metatechind.com</a> | <a href="mailto:meta@metatechind.com" style="color: #1F4E79; text-decoration: none;">meta@metatechind.com</a><br/>
+            <strong>Address:</strong> Cosmos Bank Bldg, 476, Laxmi Rd, Bhatanca Bol, Narayan Peth, Pune, MH 411030, India
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="footer">
+        <div class="footer-divider"></div>
+        <p class="footer-text"><strong>Metatech Industries</strong></p>
+        <p class="footer-text">Cosmos Bank Bldg, 476, Laxmi Rd, Bhatanca Bol</p>
+        <p class="footer-text">Narayan Peth, Pune, MH 411030, India</p>
+        <p class="footer-text">
+          <a href="mailto:sales@metatechind.com" style="color: #1F4E79; text-decoration: none;">sales@metatechind.com</a> | 
+          <a href="mailto:meta@metatechind.com" style="color: #1F4E79; text-decoration: none;">meta@metatechind.com</a>
+        </p>
+        <p class="footer-text" style="font-size: 10px; margin-top: 15px; opacity: 0.6;">
+          &copy; 2026 Metatech Industries. All rights reserved.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

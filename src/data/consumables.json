@@ -1,0 +1,113 @@
+[
+  {
+    "title": "Cutting/Sectioning Consumables",
+    "slug": "cutting-sectioning",
+    "icon": "precision_manufacturing",
+    "items": [
+      { "name": "Diamond Cutting Blades", "slug": "diamond-cutting-blades" },
+      { "name": "Abrasive Cutting Wheels", "slug": "abrasive-cut-off-wheels" },
+      { "name": "Precision Wafering Blades", "slug": "diamond-wafering-blades" },
+      { "name": "Resin-Bonded Abrasive Blades", "slug": "resin-bonded-abrasive-blades" },
+      { "name": "Cooling Lubricants", "slug": "cutting-fluid" }
+    ]
+  },
+  {
+    "title": "Moulding Consumables",
+    "slug": "moulding",
+    "icon": "layers",
+    "items": [
+      { "name": "Bakelite/Phenolic Hot Moulding Powder", "slug": "bakelite-phenolic-hot-moulding-powder" },
+      { "name": "Transparent Moulding Powder", "slug": "transparent-moulding-powder" },
+      { "name": "Black Epoxy Thermosetting Resin", "slug": "black-epoxy-thermosetting-resin" },
+      { "name": "Diallyl Phthalate", "slug": "diallyl-phthalate" },
+      { "name": "Conductive Mould Material", "slug": "conductive-mould-material" },
+      { "name": "Mould Release Spray", "slug": "mould-release-spray" },
+      { "name": "Cold Mounting System", "slug": "cold-mounting-system" },
+      { "name": "Silicon Rubber Moulds", "slug": "silicon-rubber-moulds" },
+      { "name": "Plastic Moulds", "slug": "plastic-moulds" },
+      { "name": "Mounting Clips (Plastic)", "slug": "mounting-clips-plastic" },
+      { "name": "Mounting Clips (Stainless Steel)", "slug": "mounting-clips-stainless-steel" }
+    ]
+  },
+  {
+    "title": "Grinding Consumables",
+    "slug": "grinding",
+    "icon": "blur_circular",
+    "items": [
+      { "name": "Silicon Carbide Abrasive Grinding Discs", "slug": "silicon-carbide-abrasive-grinding-discs" },
+      { "name": "Aloxite/Zircon Grinding Discs", "slug": "aloxite-zircon-grinding-discs" },
+      { "name": "Sample Holder for Spectro Polishing", "slug": "sample-holder-spectro-polishing" },
+      { "name": "Magnetic Sample/Coin Holder", "slug": "magnetic-sample-coin-holder" },
+      { "name": "Abrasive Grinding Belts", "slug": "abrasive-grinding-belts" },
+      { "name": "Diamond Grinding Discs", "slug": "diamond-grinding-discs" },
+      { "name": "Magnetic Base Pad", "slug": "magnetic-base-pad" },
+      { "name": "Polishing Pad with PSA Backing", "slug": "polishing-pad-psa-backing" },
+      { "name": "Magnetic Stainless Steel Plate", "slug": "magnetic-stainless-steel-plate" }
+    ]
+  },
+  {
+    "title": "Polishing Consumables",
+    "slug": "polishing",
+    "icon": "auto_fix_high",
+    "items": [
+      { "name": "Diamond Paste (Monocrystalline)", "slug": "diamond-paste-monocrystalline" },
+      { "name": "Aerosol Spray", "slug": "aerosol-spray" },
+      { "name": "Diamond Suspensions", "slug": "diamond-suspensions" },
+      { "name": "Colloidal Silica", "slug": "colloidal-silica" },
+      { "name": "Alumina Polishing Suspension/Powder", "slug": "alumina-polishing-suspension-powder" },
+      { "name": "Polishing Cloths", "slug": "polishing-cloths" },
+      { "name": "Imported Polishing Cloths", "slug": "imported-polishing-cloths" }
+    ]
+  },
+  {
+    "title": "In-situ Metallography Consumables",
+    "slug": "in-situ-metallography",
+    "icon": "biotech",
+    "items": [
+      { "name": "Grinding Discs (32 mm Dia.)", "slug": "grinding-discs-various-grits" },
+      { "name": "Polishing Cloths (32 mm Dia.)", "slug": "polishing-cloths-psa-back" },
+      { "name": "Replica Tape", "slug": "transparent-replica-tape" },
+      { "name": "Reflecting Replicas", "slug": "reflecting-replicas" },
+      { "name": "Etching Chemicals", "slug": "etching-chemicals" }
+    ]
+  },
+  {
+    "title": "Millipore Fluid Contamination Analysis",
+    "slug": "millipore-fluid-contamination-analysis",
+    "icon": "science",
+    "items": [
+      { "name": "Vacuum/Pressure Pump", "slug": "vacuum-pressure-pump" },
+      { "name": "Filter Paper", "slug": "filter-paper" },
+      { "name": "Dispensing Pressure Vessel", "slug": "dispensing-pressure-vessel" },
+      { "name": "Filter Flask", "slug": "filter-flask" },
+      { "name": "Filter Jet Solvent Dispenser", "slug": "filter-jet-solvent-dispenser" },
+      { "name": "Dispensing Bottles", "slug": "dispensing-bottles" },
+      { "name": "Petri Slides", "slug": "petri-slides" },
+      { "name": "Solvent Filtering Dispenser", "slug": "solvent-filtering-dispenser" }
+    ]
+  },
+  {
+    "title": "Hardness Testing Consumables",
+    "slug": "hardness-testing",
+    "icon": "verified",
+    "items": [
+      { "name": "Hardness Test Blocks", "slug": "hardness-test-blocks" },
+      { "name": "Diamond Indenters", "slug": "diamond-indenters" },
+      { "name": "Ball Penetrators", "slug": "ball-penetrators" },
+      { "name": "Micro Hardness Indenters", "slug": "micro-hardness-indenters" },
+      { "name": "Wet/Dry Silicon Carbide Grinding Discs", "slug": "wet-dry-silicon-carbide-grinding-discs" }
+    ]
+  },
+  {
+    "title": "Magnetic Particle Inspection Consumables",
+    "slug": "magnetic-particle-inspection",
+    "icon": "electric_bolt",
+    "items": [
+      { "name": "Magnetic Powder (Oil/Water Base)", "slug": "magnetic-powder" },
+      { "name": "Dye Penetrant Chemicals", "slug": "dye-penetrant-testing-chemicals" },
+      { "name": "MPI Carrier Oil", "slug": "mpi-carrier-oil" },
+      { "name": "UV LED Lamps", "slug": "uv-led-lamps" },
+      { "name": "Electro Magnetic Yokes", "slug": "electro-magnetic-yokes" }
+    ]
+  }
+]

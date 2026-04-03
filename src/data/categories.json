@@ -1,0 +1,428 @@
+[
+  {
+    "title": "Cutting",
+    "slug": "cutting",
+    "categories": [
+      {
+        "name": "Automatic Cutting Machines",
+        "slug": "automatic-cutting-machines",
+        "subcategories": [
+          {
+            "name": "AutoCut",
+            "slug": "autocut"
+          },
+          {
+            "name": "MetaCut SACT 50/80",
+            "slug": "metacut-sact-50-80"
+          },
+          {
+            "name": "Metacut",
+            "slug": "metacut"
+          },
+          {
+            "name": "Metacut-I Auto",
+            "slug": "metacut-i-auto"
+          }
+        ]
+      },
+      {
+        "name": "Oscillating Abrasive Cut-off Machines",
+        "slug": "oscillating-abrasive-cut-off-machines",
+        "subcategories": [
+          {
+            "name": "Oscicut",
+            "slug": "oscicut"
+          }
+        ]
+      },
+      {
+        "name": "Large Component Cutting Machines",
+        "slug": "large-component-cutting-machines",
+        "subcategories": [
+          {
+            "name": "Metacut L 10 / L 15",
+            "slug": "metacut-l-10-15"
+          }
+        ]
+      },
+      {
+        "name": "Diamond Cutting Machines",
+        "slug": "diamond-cutting-machines",
+        "subcategories": [
+          {
+            "name": "DCM",
+            "slug": "dcm"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Moulding / Grinding / Polishing",
+    "slug": "moulding-grinding-polishing",
+    "categories": [
+      {
+        "name": "Moulding Machines",
+        "slug": "moulding-machines",
+        "subcategories": [
+          {
+            "name": "Automount Pneumatic Press",
+            "slug": "automount-pneumatic-press"
+          },
+          {
+            "name": "Automount E Electro Press",
+            "slug": "automount-e-electro-press"
+          },
+          {
+            "name": "Automount EH Electro Hydraulic Press",
+            "slug": "automount-eh-electro-hydraulic"
+          }
+        ]
+      },
+      {
+        "name": "Grinding and Polishing Machines",
+        "slug": "grinding-polishing-machines",
+        "subcategories": [
+          {
+            "name": "Metapol DC II",
+            "slug": "metapol-dc-ii"
+          }
+        ]
+      },
+      {
+        "name": "Automatic Spectro Sample Grinding Machines",
+        "slug": "automatic-spectro-sample-grinding-machines",
+        "subcategories": [
+          {
+            "name": "Spectro Pol Auto",
+            "slug": "spectro-pol-auto"
+          }
+        ]
+      },
+      {
+        "name": "Semi Automatic Grinding Polishing Machines",
+        "slug": "semi-automatic-grinding-polishing-machines",
+        "subcategories": [
+          {
+            "name": "Autopol",
+            "slug": "autopol"
+          },
+          {
+            "name": "Autopol Dual",
+            "slug": "autopol-dual"
+          }
+        ]
+      },
+      {
+        "name": "Multi-specimen Grinding Polishing Machines",
+        "slug": "multi-specimen-grinding-polishing-machines",
+        "subcategories": [
+          {
+            "name": "Autopol-II",
+            "slug": "autopol-ii"
+          }
+        ]
+      },
+      {
+        "name": "Belt Grinders",
+        "slug": "belt-grinders",
+        "subcategories": [
+          {
+            "name": "MBG I / MBG II",
+            "slug": "mbg-i-ii"
+          }
+        ]
+      },
+      {
+        "name": "Heavy Duty Belt Grinder",
+        "slug": "heavy-duty-belt-grinder",
+        "subcategories": [
+          {
+            "name": "Heavy Duty Belt Grinder",
+            "slug": "heavy-duty-belt-grinder"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Microscope and Image Analyzer",
+    "slug": "microscope-and-image-analyzer",
+    "categories": [
+      {
+        "name": "Inverted Microscope",
+        "slug": "inverted-microscope",
+        "subcategories": [
+          {
+            "name": "Metagraph - I",
+            "slug": "metagraph-i"
+          },
+          {
+            "name": "Metagraph - SPL",
+            "slug": "metagraph-spl"
+          }
+        ]
+      },
+      {
+        "name": "Upright Microscope",
+        "slug": "upright-microscope",
+        "subcategories": [
+          {
+            "name": "Metagraph (UP)",
+            "slug": "metagraph-up"
+          }
+        ]
+      },
+      {
+        "name": "Stereo Microscope",
+        "slug": "stereo-microscope",
+        "subcategories": [
+          {
+            "name": "Stereo Microscope",
+            "slug": "stereo-microscope"
+          }
+        ]
+      },
+      {
+        "name": "Particle Size Analysis Systems",
+        "slug": "particle-size-analysis-systems",
+        "subcategories": [
+          {
+            "name": "CLEAN-EST (Stereo)",
+            "slug": "clean-est-stereo"
+          },
+          {
+            "name": "CLEAN-EST (Metallurgical)",
+            "slug": "clean-est-metallurgical"
+          }
+        ]
+      },
+      {
+        "name": "Millipore Fluid Contamination Analysis Kit",
+        "slug": "millipore-fluid-contamination-analysis-kit",
+        "subcategories": [
+          {
+            "name": "Vacuum / Pressure Pump",
+            "slug": "vacuum-pressure-pump"
+          },
+          {
+            "name": "Dispensing Pressure Vessel",
+            "slug": "dispensing-pressure-vessel"
+          },
+          {
+            "name": "Filter Paper",
+            "slug": "filter-paper"
+          },
+          {
+            "name": "Filter Flask",
+            "slug": "filter-flask"
+          },
+          {
+            "name": "Filter Jet Solvent Dispenser",
+            "slug": "filter-jet-solvent-dispenser"
+          },
+          {
+            "name": "Solvent Filtering Dispenser",
+            "slug": "solvent-filtering-dispenser"
+          },
+          {
+            "name": "Petri Slides",
+            "slug": "petri-slides"
+          },
+          {
+            "name": "Dispensing Bottles",
+            "slug": "dispensing-bottles"
+          }
+        ]
+      },
+      {
+        "name": "Image Analyzer",
+        "slug": "image-analyzer",
+        "subcategories": [
+          {
+            "name": "Grain Analysis (Intercept Method)",
+            "slug": "grain-analysis-intercept-method"
+          },
+          {
+            "name": "Planimetry Method",
+            "slug": "planimetry-method"
+          },
+          {
+            "name": "Grain Size Distribution",
+            "slug": "grain-size-distribution"
+          },
+          {
+            "name": "Phase Analysis",
+            "slug": "phase-analysis"
+          },
+          {
+            "name": "Nodularity Analysis",
+            "slug": "nodularity-analysis"
+          },
+          {
+            "name": "Graphite",
+            "slug": "graphite"
+          },
+          {
+            "name": "B Type Flake Separation",
+            "slug": "b-type-flake-separation"
+          },
+          {
+            "name": "Point Counter",
+            "slug": "point-counter"
+          },
+          {
+            "name": "Linear Measurement",
+            "slug": "linear-measurement"
+          },
+          {
+            "name": "Inclusion",
+            "slug": "inclusion"
+          },
+          {
+            "name": "Welding Analysis Setup",
+            "slug": "welding-analysis-setup"
+          },
+          {
+            "name": "Porosity Estimation",
+            "slug": "porosity-estimation"
+          },
+          {
+            "name": "Annotation",
+            "slug": "annotation"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Micro Hardness Tester",
+    "slug": "micro-hardness-tester",
+    "categories": [
+      {
+        "name": "Automatic Micro Hardness Tester",
+        "slug": "automatic-micro-hardness-tester",
+        "subcategories": [
+          {
+            "name": "Fully Automatic MVH-V",
+            "slug": "fully-automatic-mvh-v"
+          }
+        ]
+      },
+      {
+        "name": "Micro/Macro Hardness Tester (Load Cell Based)",
+        "slug": "micro-macro-hardness-tester-load-cell",
+        "subcategories": [
+          {
+            "name": "MVH-I C",
+            "slug": "mvh-i-c"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Other Machines",
+    "slug": "other-machines",
+    "categories": [
+      {
+        "name": "Electro Polishing Machine",
+        "slug": "electro-polishing-machine",
+        "subcategories": [
+          {
+            "name": "Electropol",
+            "slug": "electropol"
+          }
+        ]
+      },
+      {
+        "name": "In-situ Metallography Kit",
+        "slug": "in-situ-metallography-kit",
+        "subcategories": [
+          {
+            "name": "Portpol",
+            "slug": "portpol"
+          },
+          {
+            "name": "Portable Microscope Image Analyzer",
+            "slug": "portable-microscope-image-analyzer"
+          },
+          {
+            "name": "Replica",
+            "slug": "replica"
+          },
+          {
+            "name": "Portgrinder",
+            "slug": "portgrinder"
+          }
+        ]
+      },
+      {
+        "name": "Jominy End Quench Hardenability Set-up",
+        "slug": "jominy-end-quench-hardenability-setup",
+        "subcategories": [
+          {
+            "name": "Hardness Fixture and Chiller",
+            "slug": "hardness-fixture-and-chiller"
+          }
+        ]
+      },
+      {
+        "name": "CNC Tensile Sample Preparation Machines",
+        "slug": "cnc-tensile-sample-preparation-machines",
+        "subcategories": [
+          {
+            "name": "CNC Tensile Sample Preparation Machines",
+            "slug": "cnc-tensile-sample-preparation-machines"
+          }
+        ]
+      },
+      {
+        "name": "Hardness Testers",
+        "slug": "hardness-testers",
+        "subcategories": [
+          {
+            "name": "Superficial Rockwell Hardness Tester",
+            "slug": "superficial-rockwell-hardness-tester"
+          },
+          {
+            "name": "Portable Leeb Hardness Tester",
+            "slug": "portable-leeb-hardness-tester"
+          },
+          {
+            "name": "Portable Brinell Hardness Tester",
+            "slug": "portable-brinell-hardness-tester"
+          },
+          {
+            "name": "Rockwell Hardness Tester",
+            "slug": "rockwell-hardness-tester"
+          },
+          {
+            "name": "Portable Vickers Hardness Tester",
+            "slug": "portable-vickers-hardness-tester"
+          }
+        ]
+      },
+      {
+        "name": "Vertical Band Saw",
+        "slug": "vertical-band-saw",
+        "subcategories": [
+          {
+            "name": "Vertical Band Saw",
+            "slug": "vertical-band-saw"
+          }
+        ]
+      },
+      {
+        "name": "Transparent Mould Making System",
+        "slug": "transparent-mould-making-system",
+        "subcategories": [
+          {
+            "name": "Transmount",
+            "slug": "transmount"
+          }
+        ]
+      }
+    ]
+  }
+]

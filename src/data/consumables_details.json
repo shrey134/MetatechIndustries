@@ -1,0 +1,331 @@
+{
+  "Page 2": {
+    "Abrasive Cut Off Wheels": {
+      "Plain Cut off Wheels / Reinforced Abrasive Cut off Wheels": {
+        "description": "Aluminum oxide particle wheels are made out of various grits and bonds in phenolic binder. Wheels are formulated to give ideal finish, for metallographic preparations. Aluminium oxide wheels are used for all the ferrous / hard materials and silicon Carbide wheels are used to Soft/ Non Ferrous metals.",
+        "hardness": "Hardness up to 45 HRC (Regular) Hardness more than 45 HRC (Special)",
+        "sizes_mm": [
+          "150 x 0.8 x 12.7",
+          "350 x 2.5 x 25.4",
+          "200 x 1.0 x 25.4",
+          "400 x 3.0 x 25.4",
+          "250 x 1.5 x 25.4",
+          "450 x 3.0 x 25.4",
+          "300 x 2.0 x 25.4",
+          "500 x 3.5 x 25.4"
+        ],
+        "custom": "Custom made wheels available for their Dia., Thk., Bore (31.75 & 32 mm), Hardness."
+      }
+    },
+    "Cutting Fluid": {
+      "Standard / Regular": {
+        "description": "With rust resisting additive, water soluble cutting fluid suitable for all abrasive cut off machines.",
+        "quantity": "5 Ltr Can"
+      }
+    },
+    "Diamond Wafering Blades": {
+      "description": "Metal Bonded Diamond wafering blades are offered in low and high concentration diamond impregnation on continuous rim. They are suitable for ductile materials, polymers, pc boards, thermal spray coatings, Titanium etc. and for sectioning very hard or brittle materials including ceramics, carbides, refractories, silicon; boron composite, glasses.",
+      "low_concentration": "Low concentration blades are recommended for sectioning very hard or brittle materials including ceramic, carbides, refractories, silicon, boron composites & glass.",
+      "high_concentration": "High concentration blades are recommended for aggressive general laboratory sectioning of ductile materials, most metals, polymers, PC boards, thermal spray coatings and titanium.",
+      "sizes": [
+        "3\" Dia. x 0.006\" thick x 1/2\" Central hole",
+        "4\" Dia. x 0.012\" thick x 1/2\" Central hole",
+        "5\" Dia. x 0.015\" thick x 1/2\" Central hole",
+        "6\" Dia. x 0.020\" thick x 1/2\" Central hole",
+        "7\" Dia. x 0.025\" thick x 1/2\" Central hole",
+        "8\", 9\", 10\", 12\" available"
+      ]
+    },
+    "CBN Wafering Blades": {
+      "description": "MEDIUM CONCENTRATION METAL BOND/RESIN BOND CONTINOUS RIM are recommend or sectioning of ferrous materials including high speed steels, inonel, stellite, iron and cobalt base alloys, nickel base super alloys, lead base alloys, titanium alloys and stainless steels."
+    },
+    "Special Coolant Oil for Diamond Cut off Wheels": {
+      "description": "Special formulation, for quenching the heat during cutting operation."
+    }
+  },
+  "Page 3": {
+    "MOULDING": {
+      "Compression Mounting": {
+        "Bakelite / Phenolic Hot Moulding Powder": {
+          "description": "Black, Red, Green colors available. Superior quality with relatively low shrinkage, high mechanical strength.",
+          "technical_specifications": {
+            "Specific Hardness": "55 Shore D",
+            "Gravity": "1.4 Kgs",
+            "Shrinkage": "0.006 in/in in compression",
+            "Coefficient of linear thermal expansion": "50 in/in/°C"
+          }
+        },
+        "Transparent Moulding Powder": {
+          "description": "For Transparent Hot Moulding"
+        },
+        "Epoxy Resins ( Glass Fiber Filled )": {
+          "description": "BLACK EPOXY THERMOSETTING has superior edge retention, tough grinding and excellent flow characteristics. Chemical resistant. High hardness."
+        },
+        "Dialyl Phthalate": {
+          "description": "This has higher hardness and can be used as a front end or facing moulding material where the hardness difference of the stock ( sample ) and that of mounting resin is very high to avoid edge rounding effect. Also can be used in case of retaining small plating / coating layers. Being a costly material one can use it in few mm thickness initially and then can use normal moulding material. High hardness."
+        },
+        "Conductive Mould Material": {
+          "description": "This is copper filled thermosetting resin that is electrically conductive"
+        },
+        "Mould Release Spray": {
+          "description": "It is advisable to spray the lubricant spray before hot and cold compression for easy ejection."
+        }
+      },
+      "Cold Mounting": {
+        "Cold Mounting System": {
+          "description": "Cold mounting systems are preferred when speed and ease are desired, especially for high volume production.",
+          "curing_cycle": "15 minutes",
+          "packaging": "Binder 400 ml + Hardener 400 gm and 1 kg pack also available."
+        },
+        "Silicon Rubber Moulds": {
+          "description": "Reusable mould for Cold Mounting",
+          "sizes": "Dia. 20mm, 25.4 mm, 30 mm, 31.75 mm, 40 mm, 50 mm Or As per Customers Requirement"
+        },
+        "Plastic Moulds": {
+          "sizes": "Dia. 25.4 mm, 31.75 mm, 40 mm Or As per Customers Requirement"
+        },
+        "Mounting Clips": {
+          "Sample Support Clips": {
+            "description": "Series of Clips hold thin samples on edge for encapsulation.",
+            "usage": "Use metal for compression mounting and plastic for cold mounting."
+          },
+          "Plastic Clip for Cold Mounting": {},
+          "Stainless Steel Clip for Compression Mounting": {}
+        }
+      }
+    }
+  },
+  "Page 4": {
+    "Abrasive Grinding Disc": {
+      "description": "Silicon Carbide abrasive waterproof paper disc. (Wet/Dry)",
+      "paper_quality": "C weight",
+      "sizes": "8\"/9\"/10\"/12\" dia.",
+      "backing": "Plain / PSA Backed",
+      "grits": "80, 120, 180, 220, 320, 400, 600, 800, 1000, 1200, 1500, 2000",
+      "additional_grits": "2500, 3000, 5000",
+      "additional_sizes": "A4, 8\", 9\""
+    },
+    "Grinding Discs for Spectro Polishing Machine": {
+      "description": "Aloxide / Zircon (Plain/PSA) - Paper Base and Cloth Base",
+      "sizes": [
+        "10\" dia x 25.4 mm bore",
+        "11\" dia x 40.0 mm bore"
+      ],
+      "grits": "36, 40, 60 Or as per customer requirement"
+    },
+    "Sample Holder for Spectro Polishing Machine": {
+      "description": "Magnetic Sample / Coin Holder for Spectro Polishing Machine"
+    },
+    "Abrasive Grinding Belts": {
+      "types": "Aluminum Oxide / Zirkon Belts / Silicon Carbide",
+      "sizes": [
+        "100 x 915mm",
+        "100 x 1220mm"
+      ],
+      "grits": "60,80,120,220,320,400,600",
+      "custom": "Customized Belts Available"
+    },
+    "Diamond Grinding Discs": {
+      "description": "Diamond Grinding Discs are available in standard sizes in both metal or resin bonded varieties with Pressure Sensitive Adhesive (PSA), plain back or overhanging cloth. They are recommended for coarse and fine grinding of high hardness materials.",
+      "metal_flex": "Metal flex feature a flexible, color- coded, open patterned metal bonded disc for aggressive cutting and reduced loading.",
+      "resin_flex": "Resin flex feature a flexible, color- coded, open patterned resin bonded disc for aggressive cutting.",
+      "metal_bonded": "Metal bonded discs consist of a high quality diamond abrasive grit bonded to a wheel by an electroplating process.",
+      "resin_bonded": "Resin bonded discs also consist of a high quality diamond abrasive grit bonded to a flat aluminum disc with resin.",
+      "grits": "80,120,220,320,400,500,800,1500,3000",
+      "sizes": "8\"(203mm),10\"(254mm),12\"(305mm)"
+    },
+    "Magnetic Fixation (Retrofit to any make)": {
+      "description": "Magnetic Fixation : (Retrofit to any make) Magnetic base pad, which is permanently attached to the working wheel with a pressure- sensitive adhesive. PSA- backed polishing papers and cloths can be temporarily attached to a teflon- coated magnetic metal plate. This plate with the attached polishing Paper and cloths can be easily removed and exchanged. When the polishing paper or cloth has been depleted, simply remove it from the teflon- coated plate and replace with a new PSA- backed polishing paper or cloth."
+    }
+  },
+  "Page 5": {
+    "Diamond Paste (Monocrystalline)": {
+      "description": "Mono crystalline (M.C.) structure type diamond with heavy concentration ensures the free cutting action required to achieve best cutting action.",
+      "sizes": "0.25, 1, 3, 6, 8, 15, 30, 45 Microns - 5 gm syringe."
+    },
+    "Aerosol Spray": {
+      "description": "For extremely accurate tolerances and flawless finishes in microns or light band. Aerosol Spray can achieve a virtually scratch- free surface with the highest degree of flatness and brilliance."
+    },
+    "Diamond Suspensions": {
+      "types": "Monocrystalline / Polycrystalline",
+      "base": "Water / Oil Soluble",
+      "description": "These suspensions are suitable for use in power lapping, general polishing applications or in automated diamond dispensing systems.",
+      "sizes": "0.25, 1, 3, 6, 9, 15, 30, 45 Microns",
+      "packing": "Bottle only, Finger pump, Trigger spray & Refill"
+    },
+    "Colloidal Silica": {
+      "description": "Colloidal Silica (white) Has been formulated to reduce polishing time and are priced very economically. OPS under normal use may be diluted with water. Used for non- ferrous metals and very ductile materials like refractory metals and others. (Non Coagulating).",
+      "micron": "0.04 and 0.06."
+    },
+    "Alumina Polishing Suspension / Powder": {
+      "grade": "(Universal grade)",
+      "description": "Lavigated Alumina suspension for routine ferrous and non ferrous laboratory applications.",
+      "packaging": "Bottle / 500 gms",
+      "imported_sizes": "0.05, 0.3, 0.1, 1.0"
+    },
+    "Polishing Cloths": {
+      "sizes": "8\", 10\", 12\" dia.",
+      "backing": "Plain / Self Adhesive (PSA) / Magnetic Back / Metal Back",
+      "variants": [
+        "Synthetic fiber flocked on flexible water proof carrier, can be used with 'A' - 3 micron diamond compound.",
+        "Synthetic flocked on flexible cotton carrier, Used with 3-6 micron diamond compound.",
+        "Synthetic flocked on a flexible cotton carrier. A more heavy duty cloth for use with 6-9 micron diamond compound.",
+        "Silk cloth - for napless polishing application",
+        "Billiard cloth - for general /coarse application",
+        "Special Cloth for Fine diamond & Colloidal Silica"
+      ]
+    },
+    "Imported Polishing Cloths": {
+      "sizes": "8\", 10\", 12\" dia."
+    }
+  },
+  "Page 6": {
+    "IN- SITU METALLOGRAPHY KIT CONSUMABLES": {
+      "Grinding Discs & Polishing Cloths": {
+        "description": "Various grinding discs of grit sizes 80, 120, 180, 240, 320, 400, 600, 800, 1000, 1200 and cloths with PSA back",
+        "size": "32 mm Dia."
+      },
+      "Replica": {
+        "description": "Transparent replica / tape. Reflecting replicas. These are backed by reflecting aluminum foil and are of green colour. Reflecting foil improves the light gain of microscope and green colour improves the contrast while observation."
+      },
+      "ETCHING CHEMICALS": [
+        "Nitric Acid",
+        "Methanol",
+        "Hydrochloric Acid",
+        "Ethanol",
+        "Acetone",
+        "Picric Acid etc."
+      ]
+    },
+    "MILLIPORE FLUID CONTAMINATION ANALYSIS KIT": [
+      "Vacuum / Pressure Pump",
+      "Dispensing Pressure Vessel",
+      "Filter Jet",
+      "Solvent Dispenser",
+      "Petri Slides",
+      "Filter Paper",
+      "Filter Flask",
+      "Dispensing Bottles",
+      "Solvent Filtering Dispenser"
+    ],
+    "PORTABLE HYDRAULIC BRINELL HARDNESS TESTER": {
+      "APPLICATION": "On- site test of steel products, nonferrous metal, castings, forgings, and semi- finished heat treatment parts.- Applied to too large parts for desk testers to test. Replace Leeb testers which are in low accuracy and reliability.- Indentation could be read by indentation automatic measurement system and hardness valves displayed directly."
+    },
+    "Abrasive Grinding Disc Specifications": {
+      "description": "Wet/dry Silicon Carbide C Weight Abrasive Grinding Discs Manufactured in North America and are classified to US standards. FEPA is grit classification according to abrasive manufactured in Europe and are classified to European standards",
+      "grit_comparison": [
+        {
+          "US (CAMI)": "60",
+          "P GRADE (FEPA) Europe": "P60",
+          "MICRON SIZE": "268"
+        },
+        {
+          "US (CAMI)": "80",
+          "P GRADE (FEPA) Europe": "P80",
+          "MICRON SIZE": "192"
+        },
+        {
+          "US (CAMI)": "120",
+          "P GRADE (FEPA) Europe": "P120",
+          "MICRON SIZE": "125"
+        },
+        {
+          "US (CAMI)": "180",
+          "P GRADE (FEPA) Europe": "P180",
+          "MICRON SIZE": "76"
+        },
+        {
+          "US (CAMI)": "240",
+          "P GRADE (FEPA) Europe": "P240",
+          "MICRON SIZE": "53"
+        },
+        {
+          "US (CAMI)": "320",
+          "P GRADE (FEPA) Europe": "P320",
+          "MICRON SIZE": "35"
+        },
+        {
+          "US (CAMI)": "400",
+          "P GRADE (FEPA) Europe": "P500",
+          "MICRON SIZE": "22"
+        },
+        {
+          "US (CAMI)": "600",
+          "P GRADE (FEPA) Europe": "P800",
+          "MICRON SIZE": "21"
+        },
+        {
+          "US (CAMI)": "800",
+          "P GRADE (FEPA) Europe": "P1200",
+          "MICRON SIZE": "10"
+        },
+        {
+          "US (CAMI)": "1200",
+          "P GRADE (FEPA) Europe": "P2400",
+          "MICRON SIZE": "5"
+        },
+        {
+          "US (CAMI)": "-",
+          "P GRADE (FEPA) Europe": "P4000",
+          "MICRON SIZE": "4"
+        }
+      ]
+    }
+  },
+  "Page 7": {
+    "HARDNESS TESTERS": {
+      "Instruction": "Hardness tester is used to determine the hardness of materials, and hardness test is a means to judge the quality of metal materials or parts of products. The so-called hardness is the ability of a material to resist the indentation of another body without residual deformation under certain conditions. The greater the resistance, the higher the hardness, and vice versa.",
+      "Rockwell Hardness Tester": {},
+      "Application Fields": "Mainly used to determine the hardness of cast iron, steel, non-ferrous metals and soft alloys, and it can also be used to determine the hardness of some non-metallic materials such as hard plastics and Bakelite.",
+      "Portable Leeb Hardness Tester": {},
+      "Brinell Hardness Tester": {},
+      "Superficial Rockwell Hardness Tester": {
+        "description": "Superficial Rockwell Hardness Tester suitable for measuring superficial rockwell hardness of Ferrous Metals, Alloy Steel, Carbide and Metal after treated surface (carburizing, nitriding, plating layer). Especially suitable for precision measurement of Parallel Planes.",
+        "Specifications": {
+          "description": "Measure the hardness of metal workpiece. Applicable to Die cavity of molds, Inspection of bearing and other mass produced parts on a production line.",
+          "Features": [
+            "Test at any angle, even upside down.",
+            "Direct display of hardness scales HRB, HRC, HV, HB, HS, HL.",
+            "Large memory could store 50 groups including single measured value, impact direction, material and hardness scale etc.",
+            "User recalibration function allowed.",
+            "Manual or automatic shut down.",
+            "Use USB/RS-232 data output to connect with PC."
+          ]
+        }
+      }
+    },
+    "HARDNESS TEST BLOCKS & DIAMOND INDENTERS": {
+      "types": [
+        "Rockwell",
+        "Rockwell Superficial",
+        "Vickers",
+        "Micro Vickers",
+        "Brinell"
+      ],
+      "products": [
+        "Rockwell Regular Hardness Test Blocks",
+        "Rockwell Superficial Hardness Test Blocks",
+        "Rockwell Diamond Penetrators",
+        "Rockwell Ball Penetrators",
+        "Brinell Hardness Test Blocks",
+        "Brinell Ball Indenters",
+        "Micro Hardness Test Blocks",
+        "Aluminum Test Block",
+        "Micro Hardness Indenter",
+        "Diamond Indenters"
+      ],
+      "source": "Imported & Indigenous"
+    }
+  },
+  "Page 8": {
+    "MAGNETIC PARTICLE INSPECTION CONSUMABLES": [
+      "Fluorescent yellow- green Oil Base Magnetic Powder",
+      "Liquid / Dye Penetrant Testing Chemicals",
+      "Electro Magnetic Yokes",
+      "Fluorescent Magnetic Water Base Powder",
+      "MPI Carrier Oil",
+      "UV LED Lamps"
+    ],
+    "METATECH MACHINES": {}
+  }
+}

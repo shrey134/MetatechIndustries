@@ -1,0 +1,217 @@
+{
+  "name": "Automatic Cutting Machines",
+  "slug": "automatic-cutting-machines",
+  "heroImage": "/images/automatic-cutting-machines/automatic-cutting-machines.png",
+  "intro": {
+    "title": "Precision Cutting for Every Application",
+    "description": "Our Automatic Cutting Machines deliver high precision and efficiency for diverse industrial and laboratory applications. From Auto Cut and MetaCut systems to oscillating abrasive and tube-cutting machines, find the ideal solution for your sample preparation needs.",
+    "categoryLabel": "Browse our cutting solutions",
+    "buttons": [
+      {
+        "text": "Explore Cutting Machines",
+        "variant": "primary"
+      },
+      {
+        "text": "Contact Experts",
+        "variant": "secondary",
+        "link": "/contact"
+      }
+    ]
+  },
+  "semiAutomaticSection": {
+    "title": "Automatic Cutting Machines",
+    "description": "Process multiple samples automatically to increase throughput while freeing up users for other tasks. Automatic processing ensures consistent sample quality cycle to cycle.",
+    "label": "Our Products"
+  },
+  "specialtySection": {
+    "title": "Specialty Autocutting Machines",
+    "description": "When typical grinders can't meet your requirements for flatness or surface finish, our specialty solutions deliver exceptional results.",
+    "label": "Advanced Solutions"
+  },
+  "solutionsBanner": {
+    "title": "Full Lab Autocutting Solutions",
+    "description": "Looking for more information? Browse through our Solutions section to view technical articles, find recommended processing methods, and discover industry-specific solutions.",
+    "image": "/productsListing/Find_Your_Solutions.png",
+    "label": "Comprehensive Solutions",
+    "buttons": [
+      {
+        "text": "Solutions by Industry",
+        "variant": "primary"
+      },
+      {
+        "text": "Solutions by Material",
+        "variant": "secondary"
+      }
+    ]
+  },
+  "slides": [
+    {
+      "id": 1,
+      "image": "/cutting/automatic-cutting-machines/autocut.png",
+      "alt": "AutoCut Precision Cutting Machine",
+      "category": "Cutting Machines",
+      "title": "AutoCut",
+      "description": "The AutoCut is a high-precision automatic cutting machine designed for metallographic and materialographic sample preparation. It features motorized XYZ motions and automatic serial cutting for efficient and accurate sectioning.",
+      "reviews": 38,
+      "rating": 4.7
+    },
+    {
+      "id": 2,
+      "image": "/cutting/automatic-cutting-machines/metacut1.png",
+      "alt": "MetaCut SACT 50/80 Precision Cutting Machine",
+      "category": "Cutting Machines",
+      "title": "MetaCut SACT 50/80",
+      "description": "The MetaCut SACT 50/80 is a versatile cutting machine designed for precision sectioning of hardened materials. With options for 50mm or 80mm cutting capacity and advanced features like laser marking and hydraulic automation, it is ideal for metallographic analysis.",
+      "reviews": 32,
+      "rating": 4.6
+    },
+    {
+      "id": 3,
+      "image": "/cutting/automatic-cutting-machines/metacut_1.png",
+      "alt": "Metacut Precision Cutting Machine",
+      "category": "Cutting Machines",
+      "title": "Metacut",
+      "description": "The Metacut is a compact and efficient cutting machine designed for precision sectioning of materials with a cutting capacity of 40mm diameter. Powered by a 3 HP motor, it is ideal for metallographic sample preparation.",
+      "reviews": 28,
+      "rating": 4.5
+    }
+  ],
+  "products": [
+    {
+      "name": "AutoCut",
+      "image": "/cutting/automatic-cutting-machines/autocut.png"
+    },
+    {
+      "name": "MetaCut SACT 50/80",
+      "image": "/cutting/automatic-cutting-machines/metacut1.png"
+    },
+    {
+      "name": "Metacut",
+      "image": "/cutting/automatic-cutting-machines/metacut_1.png"
+    },
+    {
+      "name": "Metacut-I Auto",
+      "image": "/cutting/automatic-cutting-machines/metacut_1.png"
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "name": "Automatic Cutting Machines",
+      "color": "rgba(15, 125, 183, 0.1)",
+      "bgColor": "rgba(15, 125, 183, 0.1)",
+      "subItems": [
+        {
+          "name": "AutoCut",
+          "apiCall": "/api/automatic-cutting/autocut"
+        },
+        {
+          "name": "MetaCut SACT 50/80",
+          "apiCall": "/api/automatic-cutting/metacut-sact-50-80"
+        },
+        {
+          "name": "Metacut",
+          "apiCall": "/api/automatic-cutting/metacut"
+        },
+        {
+          "name": "Metacut-I Auto",
+          "apiCall": "/api/automatic-cutting/metacut-i-auto"
+        }
+      ]
+    }
+  ],
+  "productCards": [
+    {
+      "id": 1,
+      "name": "AutoCut",
+      "tag": "Precision Cutting",
+      "description": "The AutoCut is a high-precision automatic cutting machine designed for metallographic and materialographic sample preparation. It features motorized XYZ motions and automatic serial cutting for efficient and accurate sectioning.",
+      "image": "/cutting/automatic-cutting-machines/autocut.png",
+      "detail": "Automatic serial cutting with laser marking",
+      "delay": 0
+    },
+    {
+      "id": 2,
+      "name": "MetaCut SACT 50/80",
+      "tag": "Hardened Material Cutting",
+      "description": "The MetaCut SACT 50/80 is a versatile cutting machine designed for precision sectioning of hardened materials. With options for 50mm or 80mm cutting capacity and advanced features like laser marking and hydraulic automation, it is ideal for metallographic analysis.",
+      "image": "/cutting/automatic-cutting-machines/metacut1.png",
+      "detail": "Hydraulic automation option",
+      "delay": 0.1
+    },
+    {
+      "id": 3,
+      "name": "Metacut",
+      "tag": "Precision Cutting",
+      "description": "The Metacut is a compact and efficient cutting machine designed for precision sectioning of materials with a cutting capacity of 40mm diameter. Powered by a 3 HP motor, it is ideal for metallographic sample preparation.",
+      "image": "/cutting/automatic-cutting-machines/metacut_1.png",
+      "detail": "Compact design for small samples",
+      "delay": 0.2
+    },
+    {
+      "id": 4,
+      "name": "Metacut-I Auto",
+      "tag": "Automatic Cutting",
+      "description": "The Metacut-I Auto is an advanced automatic cutting machine with PLC-controlled programming and a 200mm cutting stroke. It features auto cutting in the Y direction and precise motor positioning, making it ideal for automated metallographic sample preparation.",
+      "image": "/cutting/automatic-cutting-machines/metacut_1.png",
+      "detail": "PLC-controlled automation",
+      "delay": 0.30000000000000004
+    }
+  ],
+  "specialtyProducts": [
+    {
+      "id": 1,
+      "name": "Auto Cut",
+      "description": "Fully automatic cutting machine designed for high precision and repeatability in material sectioning. Ideal for industrial and laboratory environments requiring consistent performance.",
+      "image": "/images/automatic-cutting-machines/auto-cut.png",
+      "delay": 0.1,
+      "animationX": -50,
+      "buttons": [
+        {
+          "text": "Product Details",
+          "variant": "primary"
+        },
+        {
+          "text": "Technical Specs",
+          "variant": "secondary"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "SimpliMet 4000",
+      "description": "Robust compression mounting press for encapsulating metallographic samples with high efficiency and dual mount capability.",
+      "image": "/images/automatic-cutting-machines/simplimet-4000.png",
+      "delay": 0.2,
+      "animationX": 50,
+      "buttons": [
+        {
+          "text": "Product Details",
+          "variant": "primary"
+        },
+        {
+          "text": "Technical Specs",
+          "variant": "secondary"
+        }
+      ]
+    }
+  ],
+  "subCategories": [
+    {
+      "id": "autocut",
+      "name": "AutoCut"
+    },
+    {
+      "id": "metacut-sact-50-80",
+      "name": "MetaCut SACT 50/80"
+    },
+    {
+      "id": "metacut",
+      "name": "Metacut"
+    },
+    {
+      "id": "metacut-i-auto",
+      "name": "Metacut-I Auto"
+    }
+  ]
+}
