@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect, Suspense, useRef } from "react";
 
 function ContactForm() {
   const searchParams = useSearchParams();
@@ -17,10 +17,11 @@ function ContactForm() {
     productInterest: "",
     message: ""
   });
-
+ 
   const [status, setStatus] = useState("idle"); // idle, submitting, success, error
   const [errorMessage, setErrorMessage] = useState("");
-
+  const formRef = useRef(null);
+ 
   useEffect(() => {
     const cat = searchParams.get("category");
     const prod = searchParams.get("product");
@@ -32,7 +33,13 @@ function ContactForm() {
       }));
     }
   }, [searchParams]);
-
+ 
+  useEffect(() => {
+    if (status === "success" && formRef.current) {
+      formRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }, [status]);
+ 
   const handleChange = (e) => {
     const { name, value } = e.target;
     
@@ -44,29 +51,29 @@ function ContactForm() {
       }
       return;
     }
-
+ 
     setFormData(prev => ({ ...prev, [name]: value }));
   };
-
+ 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("submitting");
     setErrorMessage("");
-
+ 
     try {
       const payload = {
         ...formData,
         phone: formData.phone ? `${formData.phoneCode} ${formData.phone}` : ""
       };
-
+ 
       const res = await fetch("/api/inquiry", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
       });
-
+ 
       const data = await res.json();
-
+ 
       if (res.ok && data.success) {
         setStatus("success");
       } else {
@@ -79,10 +86,10 @@ function ContactForm() {
       setErrorMessage("Network error. Please try again later.");
     }
   };
-
+ 
   if (status === "success") {
     return (
-      <div className="bg-[#f0f9ff] border-l-4 border-[#1E6FA8] p-8 mt-4 animate-in fade-in duration-500">
+      <div ref={formRef} className="bg-[#f0f9ff] border-l-4 border-[#1E6FA8] p-8 mt-4 animate-in fade-in duration-500 min-h-[300px] flex flex-col justify-center">
         <div className="flex items-center gap-4 mb-4">
           <span className="material-symbols-outlined text-[40px] text-[#1E6FA8]">check_circle</span>
           <h3 className="text-2xl font-black text-[#1a3c5a] tracking-tight">Inquiry Received</h3>

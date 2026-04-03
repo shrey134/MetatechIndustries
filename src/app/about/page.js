@@ -254,7 +254,44 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 5. CORE VALUES (UPDATED CONTENT) */}
+      {/* 5. MEET OUR TEAM (Compact Photo Section) */}
+      <section className="py-12 px-8 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-8 gap-6">
+            <div className="max-w-xl">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="h-[2px] w-6 bg-[#1E6FA8]"></div>
+                <span className="text-[10px] font-black tracking-[0.3em] text-[#1E6FA8] uppercase">Team Excellence</span>
+              </div>
+              <h2 className="text-3xl font-black text-[#1a3c5a] tracking-tight">Meet Our Team</h2>
+            </div>
+            <div className="hidden md:block h-[1px] flex-1 bg-slate-100 max-w-[200px] mb-2"></div>
+          </div>
+
+          {/* Compact Team Photo Placeholder */}
+          <div className="relative group">
+            <div className="relative aspect-[21/7] md:aspect-[21/6] w-full rounded-xl overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.1)] border-4 border-white">
+              <img
+                src="/images/team-group-photo.jpg"
+                alt="Metatech Industries Team"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              {/* Overlay with subtle grid and text */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1a3c5a]/50 via-transparent to-transparent flex flex-col justify-end p-6 md:p-8">
+                <h3 className="text-white text-xl md:text-2xl font-black tracking-tighter opacity-90">Precision in Every Role</h3>
+              </div>
+              
+              {/* Floating Engineering Tag - Smaller for compact layout */}
+              <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md px-4 py-2 rounded-lg shadow-md border border-white flex items-center gap-2">
+                <span className="material-symbols-outlined text-[#1E6FA8] text-[16px]">engineering</span>
+                <span className="text-[9px] font-bold tracking-widest text-[#1a3c5a] uppercase">Metatech Team</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. CORE VALUES (UPDATED CONTENT) */}
       <section className="py-12 px-8 bg-[#F8FAFC] border-y border-slate-100">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10">

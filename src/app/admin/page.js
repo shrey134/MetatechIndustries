@@ -26,31 +26,28 @@ export default function AdminPage() {
   useEffect(() => { secretRef.current = secret; }, [secret]);
 
   useEffect(() => {
-    // GIS script is loaded async in layout.js — wait for it to be ready
-    const initTokenClient = () => {
-      const client = window.google.accounts.oauth2.initTokenClient({
-        client_id: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
-        scope: 'https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/spreadsheets',
-        // callback is set dynamically in handleExport (recommended GIS pattern)
-        callback: () => {},
-      });
-      setTokenClient(client);
-      console.log('[GIS] tokenClient initialized');
-    };
-
     if (typeof window === 'undefined') return;
 
-    if (window.google?.accounts?.oauth2) {
-      // Script already loaded (e.g. hot reload)
-      initTokenClient();
-    } else {
-      // Wait for the script tag in layout.js to finish loading
-      const existingScript = document.querySelector('script[src="https://accounts.google.com/gsi/client"]');
-      if (existingScript) {
-        existingScript.addEventListener('load', initTokenClient);
-        return () => existingScript.removeEventListener('load', initTokenClient);
+    // Polling interval to wait for GIS script to be ready
+    const interval = setInterval(() => {
+      if (window.google && window.google.accounts && window.google.accounts.oauth2) {
+        clearInterval(interval);
+
+        try {
+          const client = window.google.accounts.oauth2.initTokenClient({
+            client_id: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
+            scope: 'https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/spreadsheets',
+            callback: () => {}, // Callback set dynamically in handleExport
+          });
+          setTokenClient(client);
+          console.log('[GIS] tokenClient initialized via polling');
+        } catch (err) {
+          console.error('[GIS] Initialization error:', err);
+        }
       }
-    }
+    }, 100);
+
+    return () => clearInterval(interval);
   }, []);
 
 
@@ -109,8 +106,8 @@ export default function AdminPage() {
     setSheetsExportUrl(null);
     
     if (format === 'google-sheets') {
-      if (!tokenClient) {
-        alert("Google Identity Services not initialized. Please refresh the page.");
+      if (!window.google || !window.google.accounts || !tokenClient) {
+        alert("Google services not ready. Please wait or refresh.");
         return;
       }
 

@@ -5,9 +5,25 @@ import Link from "next/link";
 import MarqueeProductCard from "@/components/MarqueeProductCard";
 import { products, mainConsumables } from "@/data/categories";
 
+const sliderImages = [
+  "/bgremoved%20homepage%20slider%20images/autocut-removebg-preview.png",
+  "/bgremoved%20homepage%20slider%20images/autopol-ii-removebg-preview.png",
+  "/bgremoved%20homepage%20slider%20images/electro-hydraulic-press-removebg-preview.png",
+  "/bgremoved%20homepage%20slider%20images/metagraph-I-removebg-preview.png",
+  "/bgremoved%20homepage%20slider%20images/metacut1-removebg-preview.png",
+];
+
 export default function Home() {
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState("idle"); // idle, loading, success, error
+  const [status, setStatus] = useState("idle");
+  const [currentSlide, setCurrentSlide] = React.useState(0);
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % sliderImages.length);
+    }, 5000); // Changed from 10000 to 5000 (5 seconds)
+    return () => clearInterval(interval);
+  }, []);
 
   // Include all products except those containing "analyzer" in the name
   const featuredProducts = products.filter(p =>
@@ -34,9 +50,9 @@ export default function Home() {
 
   return (
     <div className="bg-white font-work-sans">
-      {/* Hero Section - Refined Split Layout */}
-      <section className="relative min-h-[60vh] flex items-start overflow-hidden bg-[#F8FAFC] border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-8 pt-[6vh] pb-10 w-full relative z-10">
+      {/* Hero Section - Stabilized Split Layout */}
+      <section className="relative min-h-[60vh] md:min-h-[650px] flex items-center overflow-hidden bg-[#F8FAFC] border-b border-slate-100 py-12 md:py-0">
+        <div className="max-w-7xl mx-auto px-8 w-full relative z-10 lg:-translate-y-12 transition-transform duration-500">
           <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-16 items-center">
             {/* Left: Content */}
             <div className="max-w-2xl">
@@ -45,14 +61,14 @@ export default function Home() {
                 Precision Engineering & Excellence
                 <span className="block w-12 h-[2px] bg-primary mt-2 text-left"></span>
               </span>
-              <h1 className="text-3xl md:text-5xl font-black text-[#1a3c5a] leading-[1.01] tracking-tighter mb-4 animate-in slide-in-from-left duration-700">
+              <h1 className="text-3xl md:text-5xl font-black text-[#1a3c5a] leading-[1.01] tracking-tighter mb-4">
                 Precision Engineering for Global Industries
               </h1>
               <p className="text-base md:text-lg text-slate-600 font-medium mb-10 leading-relaxed max-w-xl">
-                Advanced materialography solutions designed for the most demanding metallurgical analysis environments. Engineering excellence in every micron.
+                40 years of experience in developing and manufacturing high end metallography and other material testing machines.
               </p>
               <div className="flex flex-wrap gap-6">
-                <Link href="/products" className="bg-primary text-white px-10 py-5 font-medium text-sm tracking-widest flex items-center gap-3 hover:bg-[#004c6b] transition-all duration-300 shadow-xl shadow-primary/20 group">
+                <Link href="/products" className="bg-[#00658d] text-white px-10 py-5 font-medium text-sm tracking-widest flex items-center gap-3 hover:bg-[#004c6b] transition-all duration-300 shadow-xl shadow-[#00658d]/20 group">
                   Explore machinery <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
                 </Link>
                 <Link href="/contact" className="border-2 border-[#1a3c5a] text-[#1a3c5a] px-10 py-5 font-medium text-sm tracking-widest hover:bg-slate-50 transition-all duration-300">
@@ -61,18 +77,26 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right: Premium Image */}
-            <div className="relative group max-w-lg mx-auto lg:ml-auto lg:mr-0">
-              <div className="relative z-10 rounded-sm overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.15)] border-8 border-white bg-white aspect-[4/3] md:aspect-auto">
-                <img
-                  alt="Metatech Industrial Laboratory Asset"
-                  className="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-1000"
-                  src="/images/hosted_img_AB6AXuDm.png"
-                />
+            {/* Right Side: Hero Slider (Stabilized Premium Frame) */}
+            <div className="relative group w-full max-w-lg mx-auto lg:ml-auto lg:mr-0 flex items-center justify-center pt-8 lg:pt-0">
+              <div className="relative z-10 rounded-sm overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.12)] border-8 border-white bg-gradient-to-br from-slate-50 to-white flex items-center justify-center h-[420px] md:h-[480px] w-full">
+                {sliderImages.map((img, index) => (
+                  <div
+                    key={index}
+                    className={`absolute inset-0 w-full h-full flex items-center justify-center p-6 md:p-10 transition-opacity duration-700 ${index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
+                      }`}
+                  >
+                    <img
+                      src={img}
+                      alt="Metatech Asset"
+                      className="max-w-[85%] max-h-[85%] object-contain drop-shadow-2xl"
+                    />
+                  </div>
+                ))}
               </div>
-              {/* Decorative accent */}
-              <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+              <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-[#00658d]/5 rounded-full blur-3xl -z-10"></div>
             </div>
+
           </div>
         </div>
       </section>
@@ -92,32 +116,32 @@ export default function Home() {
               title: "Abrasive sectioning",
               desc: "High-performance cut-off machines for heavy-duty metal sampling.",
               icon: "precision_manufacturing",
-              img: "/images/hosted_img_AB6AXuBg9.png"
+              img: "/bgremoved%20homepage%20slider%20images/autocut-removebg-preview.png"
             },
             {
               title: "Precision cutting",
               desc: "Micro-cutting systems for delicate electronic and ceramic parts.",
               icon: "content_cut",
-              img: "/images/hosted_img_AB6AXuDen.png"
+              img: "/bgremoved%20homepage%20slider%20images/metacut1-removebg-preview.png"
             },
             {
               title: "Hot mounting",
               desc: "Fully automated mounting presses for high-throughput labs.",
               icon: "layers",
-              img: "/images/hosted_img_AB6AXuCXH.png"
+              img: "/bgremoved%20homepage%20slider%20images/electro-hydraulic-press-removebg-preview.png"
             },
             {
               title: "Grinding & polishing",
               desc: "Systematic surface preparation from coarse to mirror finish.",
               icon: "shutter_speed",
-              img: "/images/hosted_img_AB6AXuDXg.png"
+              img: "/bgremoved%20homepage%20slider%20images/autopol-ii-removebg-preview.png"
             }
           ].map((cat, i) => (
-            <Link key={i} href={`/products?category=${cat.title.toLowerCase().split(' ')[0]}`} className="group bg-slate-50 border border-[#1a3c5a]/20 hover:bg-white hover:border-[#1a3c5a]/40 transition-all duration-300 flex flex-col h-full rounded-none overflow-hidden">
-              <div className="h-[180px] md:h-[200px] overflow-hidden bg-slate-100 border-b border-[#1a3c5a]/10 relative flex items-center justify-center">
+            <Link key={i} href={`/products?category=${cat.title.toLowerCase().split(' ')[0]}`} className="group bg-slate-50 border border-[#1a3c5a]/10 hover:bg-white hover:border-[#1a3c5a]/30 transition-all duration-300 flex flex-col h-full rounded-none overflow-hidden hover:shadow-lg shadow-sm">
+              <div className="h-[180px] md:h-[200px] overflow-hidden bg-white border-b border-[#1a3c5a]/5 relative flex items-center justify-center p-2">
                 <img
                   alt={cat.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+                  className="w-full h-full object-contain scale-[1.10] group-hover:scale-[1.20] transition-all duration-500 drop-shadow-md"
                   src={cat.img}
                 />
               </div>
@@ -127,8 +151,8 @@ export default function Home() {
                   <h3 className="text-[16px] font-black text-[#1a3c5a] tracking-tight first-letter:uppercase leading-tight">{cat.title}</h3>
                 </div>
                 <p className="text-[14px] text-slate-500 leading-relaxed mb-5 flex-1 first-letter:uppercase line-clamp-3">{cat.desc}</p>
-                <div className="text-primary font-black text-[10px] tracking-widest flex items-center gap-1 group/cta">
-                  Explore <span className="material-symbols-outlined text-[12px] group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+                <div className="text-primary font-black text-[13px] tracking-widest flex items-center gap-2 group/cta">
+                  Explore Catalogue <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
                 </div>
               </div>
             </Link>
@@ -216,19 +240,91 @@ export default function Home() {
           <p className="text-slate-500 text-sm font-medium mt-4 max-w-2xl mx-auto lg:mx-0 tracking-widest">High-quality preparation accessories for precise materialography</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {mainConsumables.map((cat, idx) => (
-            <div key={idx} className="group flex flex-col justify-between bg-white border border-[#e5e7eb] rounded-lg p-4 h-auto shadow-sm hover:shadow-md transition-all duration-300">
-              <div>
-                <span className="material-symbols-outlined text-3xl text-slate-300 group-hover:text-primary transition-colors mb-2.5 block">{cat.icon}</span>
-                <h3 className="text-[16px] font-semibold text-[#1a1a1a] mb-2 line-clamp-2 leading-snug">
-                  {cat.title}
-                </h3>
-                <p className="text-[13px] text-[#555] mb-3 leading-relaxed">Industrial grade standards</p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {[
+            {
+              title: "Cutting/Sectioning Consumables",
+              slug: "cutting-sectioning",
+              img: "/cutting/automatic-cutting-machines/consumables/cutting-wheel.png",
+              features: ["Burn-free abrasive sectioning", "High-life Diamond wafering blades", "Rust-resistant cooling fluids"]
+            },
+            {
+              title: "Moulding Consumables",
+              slug: "moulding",
+              img: "/consumables images/bakelite or phenolic hot moulding powder.png",
+              features: ["Superior edge retention powders", "Fast-curing cold mount systems", "High-hardness conductive resins"]
+            },
+            {
+              title: "Grinding Consumables",
+              slug: "grinding",
+              img: "/consumables images/abrasive grinding disc.png",
+              features: ["Waterproof SiC abrasive discs", "Metal/Resin bonded Diamond discs", "Magnetic fixation system compatibility"]
+            },
+            {
+              title: "Polishing Consumables",
+              slug: "polishing",
+              img: "/consumables images/diamond paste monocrystalline.png",
+              features: ["Monocrystalline Diamond pastes", "Non-coagulating Colloidal silica", "High-nap technical polishing cloths"]
+            },
+            {
+              title: "In-Situ Metallography",
+              slug: "in-situ-metallography",
+              img: "/consumables images/replica.png",
+              features: ["Self-adhesive replica tapes", "High-gain reflecting replicas", "Etching & cleaning chemicals"]
+            },
+            {
+              title: "Millipore Analysis",
+              slug: "millipore-fluid-contamination-analysis",
+              img: "/consumables images/vacuum-pressure-pump.png",
+              features: ["Precision vacuum/pressure pumps", "Solvent filtering dispensers", "High-retention filter papers"]
+            },
+            {
+              title: "Hardness Testing",
+              slug: "hardness-testing",
+              img: "/consumables images/abrasive grinding disc.png",
+              features: ["Wet/Dry SiC grinding discs", "Standardized test blocks", "Indenter protection accessories"]
+            },
+            {
+              title: "Magnetic Particle (MPI)",
+              slug: "magnetic-particle-inspection",
+              img: "/consumables images/grinding disc and polishing cloths.png",
+              features: ["Fluorescent magnetic powders", "High-viscosity MPI carrier oils", "UV-LED inspection lamps"]
+            }
+          ].map((cat, idx) => (
+            <div key={idx} className="group flex flex-col md:flex-row bg-slate-50 border border-slate-200 rounded-xl overflow-hidden hover:bg-white hover:border-primary/30 transition-all duration-500 shadow-sm hover:shadow-xl">
+              {/* Image Side - Zoomed View */}
+              <div className="w-full md:w-[150px] lg:w-[180px] bg-white border-b md:border-b-0 md:border-r border-slate-100 flex items-center justify-center p-4 overflow-hidden relative">
+                <img
+                  src={cat.img}
+                  alt={cat.title}
+                  className="w-full h-full object-contain mix-blend-multiply scale-[1.35] group-hover:scale-[1.50] transition-transform duration-700"
+                />
               </div>
-              <Link href={`/products?category=consumables&subcategory=${cat.slug}`} className="text-[13px] font-semibold text-[#0077cc] hover:underline flex items-center gap-2 group-hover:gap-2.5 transition-all w-fit mt-auto">
-                Explore range <span className="material-symbols-outlined text-[16px] transition-transform">arrow_forward</span>
-              </Link>
+
+              {/* Info Side */}
+              <div className="flex-1 p-6 flex flex-col">
+                <div className="mb-4">
+                  <h3 className="text-[18px] font-black text-[#1a3c5a] tracking-tight mb-2 group-hover:text-primary transition-colors line-clamp-1 leading-tight">
+                    {cat.title}
+                  </h3>
+                  <div className="h-[2px] w-10 bg-primary/40 rounded-full"></div>
+                </div>
+
+                <div className="space-y-3 mb-6 flex-1">
+                  <ul className="space-y-2.5">
+                    {cat.features.map((feat, i) => (
+                      <li key={i} className="flex items-start gap-2.5 text-[13.5px] text-slate-700 font-medium leading-snug">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary/60 mt-1.5 flex-shrink-0"></span>
+                        {feat}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <Link href={`/products?category=consumables&subcategory=${cat.slug}`} className="text-[#1E6FA8] text-[13px] font-black tracking-widest uppercase flex items-center gap-2 hover:gap-3 transition-all w-fit group/btn">
+                  Explore Range <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+                </Link>
+              </div>
             </div>
           ))}
         </div>

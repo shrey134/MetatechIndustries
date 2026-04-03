@@ -15,11 +15,11 @@ function ProductsContent() {
 
   // Custom image mappings for top-level categories
   const categoryImageMap = {
-    'cutting': '/images/cutting.png',
-    'moulding-grinding-polishing': '/images/polish.png',
-    'microscope-and-image-analyzer': '/images/MIA.png',
-    'micro-hardness-tester': '/images/MHT.png',
-    'other-machines': '/images/other.png',
+    'cutting': '/bgremoved%20homepage%20slider%20images/autocut-removebg-preview.png',
+    'moulding-grinding-polishing': '/bgremoved%20homepage%20slider%20images/electro-hydraulic-press-removebg-preview.png',
+    'microscope-and-image-analyzer': '/bgremoved%20homepage%20slider%20images/metagraph-I-removebg-preview.png',
+    'micro-hardness-tester': '/bgremoved%20homepage%20slider%20images/brinell-hardness-tester1-removebg-preview.png',
+    'other-machines': '/bgremoved%20homepage%20slider%20images/vertical-band-saw-removebg-preview.png',
     'consumables': '/images/metallographyconsumables.png'
   };
   const allGroups = useMemo(() => [
@@ -300,11 +300,11 @@ function ProductsContent() {
                         }
                       }}
                     >
-                      <div className="h-48 w-full bg-slate-50 relative overflow-hidden">
+                      <div className="h-48 w-full bg-white relative overflow-hidden flex items-center justify-center p-2">
                         <img
                           src={categoryImageMap[cat.slug] || cat.image || `/images/${cat.slug}.jpg`}
                           alt={cat.title}
-                          className="w-full h-full object-cover mix-blend-multiply group-hover:scale-110 transition-transform duration-500"
+                          className="w-full h-full object-contain scale-[1.15] group-hover:scale-[1.25] transition-transform duration-500 drop-shadow-sm"
                           onError={(e) => {
                             if (!e.currentTarget.src.includes('placeholder')) {
                               e.currentTarget.src = `https://via.placeholder.com/600x400?text=${encodeURIComponent(cat.title.toUpperCase())}`;

@@ -151,86 +151,80 @@ export default function ProductPage() {
 
   return (
     <div className="w-full bg-[#fef7ff] text-[#1d1a22] font-['Inter',_sans-serif]">
-      {/* Breadcrumb (Precision Blueprint Style) */}
-      <div className="bg-[#fef7ff] px-6 py-2.5 flex items-center gap-2 text-[10px] uppercase font-bold tracking-[0.1em] text-[#595f67]">
-        <Link href="/" className="hover:text-[#071240] transition-colors">Home</Link>
-        <span className="material-symbols-outlined text-[12px]">chevron_right</span>
+      {/* Breadcrumb (Refined & Professional - Balanced Spacing) */}
+      <div className="bg-white px-8 py-6 flex items-center gap-2 text-[14px] font-medium tracking-tight text-slate-500 border-b border-slate-100 mt-2">
+        <Link href="/" className="hover:text-[#1E6FA8] transition-colors">Home</Link>
+        <span className="material-symbols-outlined text-[16px] opacity-40">chevron_right</span>
         <Link 
           href={`/products?category=${parentGroup?.slug}&subcategory=${product.categorySlug}`} 
-          className="hover:text-[#071240] transition-colors uppercase"
+          className="hover:text-[#1E6FA8] transition-colors capitalize"
         >
           {product.categorySlug?.replace(/-/g, ' ')}
         </Link>
-        <span className="material-symbols-outlined text-[12px]">chevron_right</span>
-        <span className="text-[#1d1a22] uppercase">{product.name}</span>
+        <span className="material-symbols-outlined text-[16px] opacity-40">chevron_right</span>
+        <span className="text-[#1a3c5a] font-bold capitalize">{product.name}</span>
       </div>
 
       {/* Product Intro Section */}
-      <section className="bg-white py-8 lg:py-10 px-4 md:px-8 border-b border-slate-100">
-        <div className="max-w-[1240px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start relative">
+      <section className="bg-white py-8 lg:py-16 px-4 md:px-8 border-b border-slate-100">
+        <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-12 lg:gap-20 items-start relative">
           
-          {/* Left: Product Gallery Container */}
-          <div className="flex flex-col relative w-full group/gallery">
+          {/* Left: Product Gallery Container (Refined Vertical Layout) */}
+          <div className="flex flex-col lg:flex-row-reverse gap-4 relative w-full group/gallery">
             
-            {/* The Main Image Stage */}
+            {/* The Main Image Stage (With Inner Zoom) */}
             <div 
               ref={imageContainerRef}
-              className="relative w-full aspect-square md:aspect-[4/3] bg-[#f8fafc] rounded-lg border border-slate-100 flex items-center justify-center p-4 overflow-hidden cursor-zoom-in mb-4 shadow-sm"
+              className="relative flex-1 aspect-square md:aspect-[4/3] bg-white rounded-xl border border-slate-100 flex items-center justify-center p-8 overflow-hidden cursor-crosshair shadow-sm"
               onClick={() => setIsLightboxOpen(true)}
               onMouseEnter={() => setIsZooming(true)}
               onMouseLeave={() => setIsZooming(false)}
               onMouseMove={handleMouseMove}
             >
-              {/* Optional UI tags inside image stage */}
+              {/* Optional UI tags */}
               {product.tag && (
-                <div className="absolute top-5 left-5 z-10 pointer-events-none">
-                  <span className="bg-[#1a3c5a] text-white text-[10px] font-bold px-3 py-1.5 rounded-[4px] tracking-wider uppercase shadow-sm">
+                <div className="absolute top-5 left-5 z-20 pointer-events-none">
+                  <span className="bg-[#1a3c5a] text-white text-[10px] font-black px-4 py-2 rounded-sm tracking-widest uppercase shadow-lg">
                     {product.tag}
                   </span>
                 </div>
               )}
               
-              <img 
-                alt={product.name} 
-                className="w-full h-full object-contain mix-blend-multiply transition-opacity duration-300"
-                style={{ opacity: isZooming ? 0.3 : 1 }}
-                src={product.images[selectedImage]}
-              />
-
-              {/* Hover Zoom Reticle / Prompt */}
-              <div className="absolute top-5 right-5 z-10 pointer-events-none bg-white/90 p-2.5 rounded-full shadow-sm hidden lg:flex items-center justify-center opacity-70 group-hover/gallery:opacity-100 transition-opacity">
-                <span className="material-symbols-outlined text-[#1E6FA8] text-[18px]">zoom_in</span>
+              {/* Main Image with Inner Zoom Logic */}
+              <div className="w-full h-full relative">
+                <img 
+                  alt={product.name} 
+                  className={`w-full h-full object-contain mix-blend-multiply transition-transform duration-200 ease-out`}
+                  style={{ 
+                    transform: isZooming ? `scale(2.2) translate(${-(zoomPosition.x - 50) / 2}%, ${-(zoomPosition.y - 50) / 2}%)` : 'scale(1)',
+                    transformOrigin: 'center'
+                  }}
+                  src={product.images[selectedImage]}
+                />
               </div>
+
+              {/* Zoom Guide Link */}
+              {!isZooming && (
+                <div className="absolute bottom-5 right-5 z-20 pointer-events-none bg-white shadow-md p-2.5 rounded-full border border-slate-100 ring-4 ring-white/50 opacity-80">
+                  <span className="material-symbols-outlined text-[#1E6FA8] text-xl">zoom_in</span>
+                </div>
+              )}
             </div>
 
-            {/* Thumbnail Gallery */}
-            <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide justify-start w-full">
+            {/* Vertical Thumbnail Gallery */}
+            <div className="flex lg:flex-col gap-3 overflow-x-auto lg:overflow-y-auto lg:h-full lg:max-h-[500px] pb-2 lg:pb-0 scrollbar-hide justify-start lg:w-20 shrink-0">
               {product.images.map((image, index) => (
                 <button
                   key={index}
                   onClick={() => setSelectedImage(index)}
-                  className={`flex-shrink-0 relative w-20 h-20 rounded-md border-2 transition-all overflow-hidden ${
-                    selectedImage === index ? 'border-[#1E6FA8] opacity-100 shadow-sm' : 'border-slate-100 bg-slate-50 opacity-70 hover:opacity-100 hover:border-slate-200'
+                  className={`flex-shrink-0 relative w-16 h-16 md:w-20 md:h-20 rounded-lg border-2 transition-all overflow-hidden ${
+                    selectedImage === index ? 'border-[#1E6FA8] opacity-100 shadow-md ring-2 ring-[#1E6FA8]/10' : 'border-slate-100 bg-slate-50 opacity-60 hover:opacity-100 hover:border-slate-200 shadow-sm'
                   }`}
                 >
                   <img src={image} alt={`Thumbnail ${index + 1}`} className="w-full h-full object-contain p-2 mix-blend-multiply" />
                 </button>
               ))}
             </div>
-
-            {/* Amazon-style Floating Zoom Portal (Right Side Overlay) */}
-            {isZooming && (
-              <div className="hidden lg:block absolute top-0 left-[calc(100%+4rem)] w-full h-[500px] bg-white border border-[#e2e8f0] shadow-[0_20px_50px_rgba(0,0,0,0.15)] z-[100] rounded-lg overflow-hidden pointer-events-none">
-                <div 
-                  className="w-full h-full bg-no-repeat bg-white transition-opacity duration-200"
-                  style={{
-                    backgroundImage: `url(${product.images[selectedImage]})`,
-                    backgroundPosition: `${zoomPosition.x}% ${zoomPosition.y}%`,
-                    backgroundSize: '200%' // Zoom magnification level
-                  }}
-                />
-              </div>
-            )}
           </div>
 
           {/* Right: Product Details */}

@@ -174,9 +174,9 @@ export default function CoursesPage() {
   return (
     <div className="bg-surface text-on-surface">
       <main>
-        {/* Accolades-Aligned Perfectly Centered Hero Section */}
-        <section className="relative min-h-[60vh] flex flex-col items-center justify-center overflow-hidden border-b border-slate-200">
-          {/* Subtle Rotated Background Image */}
+        {/* Original Style Hero Section with Adjusted Top Padding */}
+        <section className="relative pt-16 pb-20 min-h-[65vh] flex flex-col items-center justify-center overflow-hidden border-b border-slate-200">
+          {/* Original Rotated Background Image Glow */}
           <div className="absolute inset-0 z-0 overflow-hidden">
             <img
               src="/images/courses_hero.jpeg"
@@ -190,24 +190,24 @@ export default function CoursesPage() {
 
           <div className="relative z-20 max-w-6xl mx-auto px-8 w-full flex flex-col items-center text-center">
             {/* Precision Badge */}
-            <span className="inline-block text-sm md:text-base font-semibold tracking-[0.08em] text-primary mb-6">
+            <span className="inline-block text-sm md:text-base font-semibold tracking-[0.08em] text-[#1E6FA8] mb-6">
               Advanced Materialography Solutions
-              <span className="block w-12 h-[2px] bg-primary mt-2 mx-auto"></span>
+              <span className="block w-12 h-[2px] bg-[#1E6FA8] mt-2 mx-auto"></span>
             </span>
 
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#1a3c5a] tracking-tighter leading-tight mb-8 text-center w-full max-w-5xl">
-              Precision <span className="text-[#1E6FA8]">Metallurgical</span> Services
+            <h1 className="text-3xl md:text-5xl lg:text-7xl font-black text-[#1a3c5a] tracking-tight leading-tight mb-8 text-center w-full max-w-5xl">
+              Precision <span className="text-[#1E6FA8]">Metallurgical</span> Expertise
             </h1>
 
-            <p className="text-lg text-slate-500 font-medium leading-relaxed max-w-2xl mx-auto mb-10 text-center">
+            <p className="text-lg text-slate-500 font-medium leading-relaxed max-w-2xl mx-auto mb-12 text-center">
               Delivering cutting-edge material testing and characterization. Our specialized laboratory workflows ensure absolute structural integrity and performance validation.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 w-full">
-              <button className="bg-[#1E6FA8] text-white px-12 py-5 font-bold text-sm tracking-wide hover:bg-[#1a3c5a] shadow-xl shadow-[#1E6FA8]/20 transition-all duration-400 hover:-translate-y-1 min-w-[200px]">
+              <Link href="/contact" className="bg-[#1E6FA8] text-white px-12 py-5 font-bold text-sm tracking-wide hover:bg-[#1a3c5a] shadow-xl shadow-[#1E6FA8]/20 transition-all duration-400 hover:-translate-y-1 min-w-[220px] text-center">
                 Explore capabilities
-              </button>
-              <button className="bg-white/80 border-2 border-[#1E6FA8] text-[#1E6FA8] px-12 py-5 font-bold text-sm tracking-wide hover:bg-[#1E6FA8] hover:text-white transition-all duration-400 backdrop-blur-sm shadow-lg hover:-translate-y-1 min-w-[200px]">
+              </Link>
+              <button className="bg-white/80 border-2 border-[#1E6FA8] text-[#1E6FA8] px-12 py-5 font-bold text-sm tracking-wide hover:bg-[#1E6FA8] hover:text-white transition-all duration-400 backdrop-blur-sm shadow-lg hover:-translate-y-1 min-w-[220px]">
                 Technical docs
               </button>
             </div>
